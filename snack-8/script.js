@@ -19,17 +19,28 @@ const students = [
   },
 ];
 
-const marco = students.filter((student) => {
-  if (student.name === "Marco Lanci") {
-    return `${student.class}`;
-  }
-});
-console.log(marco);
+// const marco = students.filter((student) => {
+//   if (student.name === "Marco Lanci") {
+//     return `${student.class}`;
+//   }
+// });
+// console.log(marco);
 
-let marcoClass = marco.map((classe) => {
-  return `${classe.class}`;
-});
-console.log(marcoClass);
+// let marcoClass = marco.map((classe) => {
+//   return `${classe.class}`;
+// });
+// console.log(marcoClass);
+
+const searchedStudent = students.find(
+  (student) => student.name === "Marco Lanci"
+);
+
+let searchedStudentClass;
+if (searchedStudent) {
+  searchedStudentClass = searchedStudent.class;
+}
+
+console.log(searchedStudentClass);
 
 // Recupera la classe dello studente 'Marco Lanci'
 // Risultato: '3C'
